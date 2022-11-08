@@ -1,0 +1,15 @@
+CREATE TABLE `user` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`username` VARCHAR(120) NOT NULL,
+`password` VARCHAR(120) NOT NULL,
+`enabled` INT NOT NULL,
+PRIMARY KEY(`id`));
+
+CREATE TABLE `authorities` (
+`id` int NOT NULL AUTO_INCREMENT,
+`username` varchar(120) NOT NULL,
+`authority` varchar(120) NOT NULL,
+PRIMARY KEY (`id`));
+
+INSERT IGNORE INTO `user` VALUES (NULL, 'Adam13033', '1234', 1);
+INSERT IGNORE INTO `authorities` VALUES (NULL, `Adam13033', 'write');
